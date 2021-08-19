@@ -27,7 +27,6 @@ function addition() {
     num1=$(echo $((RANDOM % 50)))
     num2=$(echo $((RANDOM % 50)))
     sum=$(echo $((${num1} + ${num2})))
-    #--------------------------------------------- #this is for hard mode
     echo ${GREEN}"What is ${num1} + ${num2}? Do you want easy mode?"${LIGHTGRAY} && read -r -p "[Y/n] " input
     case $input in
     [yY][eE][sS] | [yY])
@@ -45,7 +44,6 @@ function addition() {
         esac
     echo "Answer: "
     read answer
-#---------------------------------------------
     ##echo ${sum}
     #echo "What is ${num1} + ${num2}" && read answer
 
