@@ -40,7 +40,7 @@ cd ${directory}
 
 #Print(Write) message directly to file
 touch ${variable1}
-echo "Hello user" > ${variable1}
+echo "Hello ${username}" > ${variable1}
 
 #Move file (defined as variable 1 in script) to the directory you started your script (i.e. ~/Desktop).
 mv ${variable1} ..
