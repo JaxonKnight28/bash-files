@@ -4,7 +4,7 @@
 
 
 #start match game
-##declare variables ##this is a test using a shh key
+##declare variables
 
 # color variables
 # Black        0;30     Dark Gray     1;30
