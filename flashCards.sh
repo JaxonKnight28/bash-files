@@ -2,7 +2,7 @@
 # echo $RANDOM ##RANDOM is a function that returns a random number
 # echo $((RANDOM % 50)) ## '% 50' limits the generator so that it won't return a number higher than 50
 
-#This is a test for github desktop
+
 #start match game
 ##declare variables
 
