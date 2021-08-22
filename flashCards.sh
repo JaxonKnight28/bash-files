@@ -22,13 +22,14 @@ if [[ -z $1 ]]; then
 fi
 
 function addition() {
+    purple='\033[0;35m'
     green='\033[0;32m'
     gray='\033[0;37m'
     red='\033[0;31m'
     num1=$(echo $((RANDOM % 50)))
     num2=$(echo $((RANDOM % 50)))
     sum=$(echo $((${num1} + ${num2})))
-    echo ${GREEN}"What is ${num1} + ${num2}? Do you want easy mode?"${LIGHTGRAY} && read -r -p "[Y/n] " input
+    echo ${green}"What is ${purple} ${num1} + ${num2}? ${green} Do you want easy mode?"${gray} && read -r -p "[Y/n] " input
     case $input in
     [yY][eE][sS] | [yY])
         #easy mode stuff here
@@ -36,7 +37,7 @@ function addition() {
         ;;
     [nN][oO] | [nN])
         #no easy mode
-        echo "You are a math pro, good luck"
+        echo ${red}"You are a math pro, good luck"${gray}
         ;;
     *)
         echo ""
@@ -58,7 +59,7 @@ function addition() {
         echo ""
         echo ${red}"Wrong"${gray}
         total=${#score[@]} ## '#' counts the length of the array
-        echo "Final Score " ${total}
+        echo ${purple}"Final Score " ${total} ${gray}
         exit
     fi
     addition
