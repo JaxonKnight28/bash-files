@@ -66,6 +66,7 @@ function addition() {
 }
 
 function subtraction() {
+    purple='\033[0;35m'
     green='\033[0;32m'
     gray='\033[0;37m'
     red='\033[0;31m'
@@ -73,7 +74,7 @@ function subtraction() {
     num2=$(echo $((RANDOM % 50)))
     if [[ ${num1} -gt ${num2} ]]; then
         sum=$(echo $((${num1} - ${num2})))
-        echo ${GREEN}"What is ${num1} - ${num2}? Do you want easy mode?"${LIGHTGRAY} && read -r -p "[Y/n] " input
+        echo ${green}"What is ${purple} ${num1} - ${num2}? ${green} Do you want easy mode?"${gray} && read -r -p "[Y/n] " input
         case $input in
             [yY][eE][sS] | [yY])
             #easy mode stuff here
@@ -81,7 +82,7 @@ function subtraction() {
                ;;
             [nN][oO] | [nN])
                 #no easy mode
-               echo "You are a math pro, good luck"
+               echo ${red}"You are a math pro, good luck"${gray}
               ;;
           *)
               echo ""
@@ -94,7 +95,7 @@ function subtraction() {
         #echo "What is ${num1} - ${num2}" && read answer
     else
         sum=$(echo $((${num2} - ${num1})))
-                echo ${GREEN}"What is ${num2} - ${num1}? Do you want easy mode?"${LIGHTGRAY} && read -r -p "[Y/n] " input
+                echo ${green}"What is ${purple}${num2} - ${num1}? ${green} Do you want easy mode?"${gray} && read -r -p "[Y/n] " input
         case $input in
             [yY][eE][sS] | [yY])
             #easy mode stuff here
@@ -102,7 +103,7 @@ function subtraction() {
                ;;
             [nN][oO] | [nN])
                 #no easy mode
-               echo "You are a math pro, good luck"
+               echo ${red}"You are a math pro, good luck"${gray}
               ;;
           *)
               echo ""
@@ -125,20 +126,21 @@ function subtraction() {
         echo ""
         echo ${red}"Wrong"${gray}
         total=${#score[@]} ## '#' counts the length of the array
-        echo "Final Score " ${total}
+        echo ${purple}"Final Score " ${total}${gray}
         exit
     fi
     subtraction
 }
 
 function multiply() {
+    purple='\033[0;35m'
     green='\033[0;32m'
     gray='\033[0;37m'
     red='\033[0;31m'
     num1=$(echo $((RANDOM % 50)))
     num2=$(echo $((RANDOM % 50)))
     sum=$(echo $((${num1} * ${num2})))
-    echo ${GREEN}"What is ${num1} * ${num2}? Do you want easy mode?"${LIGHTGRAY} && read -r -p "[Y/n] " input
+    echo ${green}"What is ${purple}${num1} * ${num2}${green}? Do you want easy mode?"${gray} && read -r -p "[Y/n] " input
     case $input in
     [yY][eE][sS] | [yY])
         #easy mode stuff here
@@ -146,7 +148,7 @@ function multiply() {
         ;;
     [nN][oO] | [nN])
         #no easy mode
-        echo "You are a math pro, good luck"
+        echo ${red}"You are a math pro, good luck"${gray}
         ;;
     *)
         echo ""
@@ -168,13 +170,14 @@ function multiply() {
         echo ""
         echo ${red}"Wrong"${gray}
         total=${#score[@]} ## '#' counts the length of the array
-        echo "Final Score " ${total}
+        echo ${purple}"Final Score " ${total}${gray}
         exit
     fi
     multiply
 }
 
 function divide() {
+    purple='\033[0;35m'
     green='\033[0;32m'
     gray='\033[0;37m'
     red='\033[0;31m'
@@ -182,7 +185,7 @@ function divide() {
     num2=$(echo $((RANDOM % 50)))
     if [[ ${num1} -gt ${num2} ]]; then
         sum=$(echo $((${num1} / ${num2})))
-        echo ${GREEN}"What is ${num1} / ${num2}? Do you want easy mode?"${LIGHTGRAY} && read -r -p "[Y/n] " input
+        echo ${green}"What is ${purple}${num1} / ${num2}${green}? Do you want easy mode?"${gray} && read -r -p "[Y/n] " input
         case $input in
         [yY][eE][sS] | [yY])
             #easy mode stuff here
@@ -190,7 +193,7 @@ function divide() {
             ;;
         [nN][oO] | [nN])
             #no easy mode
-            echo "You are a math pro, good luck"
+            echo ${red}"You are a math pro, good luck"${gray}
             ;;
         *)
             echo ""
@@ -203,7 +206,7 @@ function divide() {
         #echo "What is ${num1} / ${num2}" && read answer
     else
         sum=$(echo $((${num2} / ${num1})))
-        echo ${GREEN}"What is ${num2} / ${num1}? Do you want easy mode?"${LIGHTGRAY} && read -r -p "[Y/n] " input
+        echo ${green}"What is ${purple}${num2} / ${num1}${green}? Do you want easy mode?"${gray} && read -r -p "[Y/n] " input
         case $input in
     [yY][eE][sS] | [yY])
         #easy mode stuff here
@@ -211,7 +214,7 @@ function divide() {
         ;;
     [nN][oO] | [nN])
         #no easy mode
-        echo "You are a math pro, good luck"
+        echo ${red}"You are a math pro, good luck"${gray}
         ;;
     *)
         echo ""
@@ -234,20 +237,21 @@ function divide() {
         echo ""
         echo ${red}"Wrong"${gray}
         total=${#score[@]} ## '#' counts the length of the array
-        echo "Final Score " ${total}
+        echo ${purple}"Final Score " ${total}${gray}
         exit
     fi
     divide
 }
 
 function hardMath() {
+    purple='\033[0;35m'
     green='\033[0;32m'
     gray='\033[0;37m'
     red='\033[0;31m'
     num1=$(echo $((RANDOM % 100)))
     num2=$(echo $((RANDOM % 100)))
     sum=$(echo $((${num1} + ${num2})))
-    echo ${GREEN}"What is ${num1} + ${num2}? Do you want easy mode?"${LIGHTGRAY} && read -r -p "[Y/n] " input
+    echo ${green}"What is ${purple}${num1} + ${num2}${green}? Do you want easy mode?"${gray} && read -r -p "[Y/n] " input
     case $input in
     [yY][eE][sS] | [yY])
         #easy mode stuff here
@@ -255,7 +259,7 @@ function hardMath() {
         ;;
     [nN][oO] | [nN])
         #no easy mode
-        echo "You are a math pro, good luck"
+        echo ${red}"You are a math pro, good luck"${gray}
         ;;
     *)
         echo ""
@@ -277,7 +281,7 @@ function hardMath() {
         echo ""
         echo ${red}"Wrong"${gray}
         total=${#score[@]} ## '#' counts the length of the array
-        echo "Final Score " ${total}
+        echo ${purple}"Final Score " ${total}${gray}
         exit
     fi
     hardMath
