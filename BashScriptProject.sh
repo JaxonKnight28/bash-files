@@ -1,4 +1,4 @@
-# Jaxon Knight, Project: Bash Script
+# Jaxon Knight, Project: Bash Script ##this is a branch test
 
 #create variables
 variable1=testFile.txt
